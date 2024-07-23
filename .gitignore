@@ -1,0 +1,8 @@
+# Manim export files
+media/
+
+# Temporary Python files
+__pycache__/
+
+# MacOS files
+.DS_Store
