@@ -1,26 +1,11 @@
 from manim import *
 
-class Epicycle(Scene):
+class Epicicli(Scene):
     def construct(self):
-        center = Dot(radius=.15)
-        inner_circle = Circle(radius=1.3).shift(UP * .3)
-        outer_circle = Circle(radius=3).shift(DOWN * .3)
+        bigger_circle = Circle(2.5)
+        middle_line = Line(UP, DOWN).scale(3).shift(UP * .6)
 
-        outer_planet = Dot(radius=.10)
-        inner_planet = Dot(radius=.05)
-        line_end = Dot(radius=.05).shift
-        line_slope = ValueTracker(0)
+        upper_circle = Circle(1.5)
+        upper_circle.move_to(Intersection(bigger_circle, middle_line).get_center())
 
-        def draw_line():
-            output = Line(start=outer_planet.get_center(), end=inner_planet.get_center())
-            line_slope.set_value(output.get_slope())
-            return output
-
-        line = always_redraw(lambda: draw_line())
-        line_continue = always_redraw(lambda: Line(start=inner_planet.get_center()))
-
-        self.add(center, inner_circle, outer_circle, outer_planet, inner_planet, line)
-        for i in range(0, 3):
-            self.play(
-                MoveAlongPath(outer_planet, outer_circle, run_time=8, rate_func=linear),
-                MoveAlongPath(inner_planet, inner_circle, run_time=4, rate_func=linear))
+        self.add(bigger_circle, middle_line, upper_circle)
