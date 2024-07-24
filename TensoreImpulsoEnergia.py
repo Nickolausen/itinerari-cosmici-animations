@@ -2,10 +2,6 @@ from manim import *
 
 class TensoreImpulsoEnergia(Scene):
     def construct(self):
-        single_cells = []
-        for row in range(0, 4):
-            for col in range(0, 4):
-                single_cells.append("T_{"+ f"{row}"+ f"{col}" + "}")
 
         tex_string = r"""\begin{bmatrix}
             T_{00} & T_{01} & T_{02} & T_{03} \\
