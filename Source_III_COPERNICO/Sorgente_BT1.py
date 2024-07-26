@@ -1,0 +1,2 @@
+main_text = r"“Stenzel il mandriano ha preso possesso di tre appezzamenti,\\ che Hans Calau aveva lasciato. \\ Ha ricevuto un bue, una mucca, un maialino, due sacchi di semi di segale e null’altro. E io ho promesso di aggiungere un cavallo.”"
+citation_text = r"\textit{(da un’annotazione di Copernico nel libro mastro della Varmia, 23 aprile 1517)}"

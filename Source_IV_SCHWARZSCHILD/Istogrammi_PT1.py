@@ -47,7 +47,7 @@ class RandomHistogram(Scene):
         function.set_color(ORANGE).set_stroke(width=8)
 
         integral = chart.get_area(graph=function)
-        integral.set_fill(TEAL, .7)
+        integral.set_fill(GREEN, .7)
 
         self.play(AnimationGroup(*[FadeIn(dot) for dot in dots], lag_ratio=.7))
         self.wait()
